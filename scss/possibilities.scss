@@ -1,0 +1,223 @@
+.possibility {
+   display: flex;
+
+   &::before {
+      content: '';
+      display: block;
+      flex: 0 0 50%;
+      background: url('../images/image_1.jpg') no-repeat center;
+      background-size: cover;
+   }
+
+   &:nth-child(2) {
+      flex-direction: row-reverse;
+
+      &::before {
+         background: url('../images/image_2.jpg') no-repeat center;
+         background-size: cover;
+      }
+      
+      .possibility_container {
+         padding: 245px 111px 125px 10px;
+      }
+
+      .possibility_term_number {
+         top: 211px;
+         left: auto;
+         right: -84px;
+      }
+   }
+
+   &:nth-child(3) {
+
+      &::before {
+         background: url('../images/image_3.jpg') no-repeat center;
+         background-size: cover;
+      }
+
+      .possibility_descript {
+         max-width: 515px;
+      }
+   }
+
+   &_container {
+      position: relative;
+      flex: 0 0 50%;
+      padding: 245px 10px 125px 111px;
+      max-width: (($container_width - 2 * $container_padding) / 2);
+   }
+
+   &_term {
+      margin-bottom: 100px;
+      font-family: "Proxima Nova Bold", Arial, Helvetica, sans-serif;
+
+      &_number {
+         position: absolute;
+         top: 211px;
+         left: -84px;
+         display: flex;
+         flex-direction: column;
+         width: 168px;
+         height: 155px;
+         background-color: #5e42b0;
+      }
+
+      &_digit {
+         margin: auto;
+         color: #f5f6f7;
+         font-size: 24px;
+         line-height: 34px;
+         text-transform: uppercase;
+         letter-spacing: 1.2px;
+
+         &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 5px;
+            border-radius: 2px;
+            background-color: #ffffff;
+            opacity: 0.3;
+         }
+      }
+
+      &_text {
+         display: inline-block;
+         vertical-align: top;
+         margin: 0;
+         color: #e6e6e6;
+         font-size: 90px;
+         line-height: 1;
+         text-transform: uppercase;
+      }
+   }
+
+   &_descript {
+      max-width: 330px;
+      min-height: 170px;
+      padding-bottom: 10px;
+      color: #000000;
+      font-family: "Proxima Nova Regular", Arial, Helvetica, sans-serif;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 1.2px;
+      position: relative;
+
+      &::after {
+         content: '';
+         position: absolute;
+         left: 0px;
+         bottom: 0px;
+         width: 22px;
+         height: 5px;
+         border-radius: 2px;
+         background-color: #5e42b0;
+      }
+   }
+}
+
+/* 768 */
+@media (max-width: $pad_width) {
+
+   .possibility {
+      flex-direction: column;
+
+      &:nth-child(2) {
+         flex-direction: column;
+
+         .possibility_container {
+            padding: 72px 34px 63px;
+         }
+
+         .possibility_term_number {
+            top: -80px;
+            left: 33px;
+            width: 116px;
+            height: 116px;
+         }
+      }
+
+      &::before {
+         min-height: 584px;
+      }
+
+      &_container {
+         padding: 72px 34px 63px;
+      }
+
+      &_term {
+         margin-bottom: 16px;
+
+         &_number {
+            top: -80px;
+            left: 33px;
+            width: 116px;
+            height: 116px;
+         }
+      }
+
+      &_descript {
+         width: auto;
+         min-height: 85px;
+      }
+   }
+}
+
+/* 320 */
+@media (max-width: $phone_width) {
+   .possibility {
+
+      &:nth-child(2) {
+
+         .possibility_container {
+            padding: 31px 19px 50px;
+         }
+
+         .possibility_term_number {
+            top: -58px;
+            left: 19px;
+            width: 70px;
+            height: 70px;
+         }
+      }
+
+      &::before {
+         min-height: 351px;
+      }
+
+      &_container {
+         padding: 31px 19px 50px;
+      }
+
+      &_term {
+         margin-bottom: 16px;
+
+         &_number {
+            top: -58px;
+            left: 19px;
+            width: 70px;
+            height: 70px;
+         }
+         
+         &_digit {
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.7px;
+
+            &::after {
+               height: 4px;
+            }
+         }
+         
+         &_text {
+            font-size: 28px;
+         }
+      }
+
+      &_descript {
+         font-size: 16px;
+         line-height: 20px;
+         letter-spacing: 0.8px;
+      }
+   }
+}

@@ -1,0 +1,190 @@
+@import '../scss/fonts.scss';
+@import '../scss/variables.scss';
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   background-color: white;
+   min-width: 320px;
+}
+
+.container {
+   display: block;
+   max-width: $container_width;
+   margin: 0 auto;
+   padding: 0 $container_padding;
+}
+
+.link {
+   display: inline-flex;
+   vertical-align: top;
+   text-decoration: none;
+   color: inherit;
+
+   &:visited {
+      color: inherit;
+   }
+}
+
+.logo {
+   object-fit: contain;
+}
+
+.button {
+   display: inline-flex;
+   vertical-align: top;
+   min-width: 311px;
+   min-height: 77px;
+   box-shadow: 0 16px 24px #0a0e34;
+   background-color: $button_color_violet;
+   border-radius: 77px;
+   margin-right: 50px;
+
+
+   &:last-of-type {
+      margin-right: 0;
+   }
+
+   &_link {
+      flex: 1 1 100%;
+      align-items: center;
+      border-radius: 77px;
+      color: #ffffff;
+      font-family: "Proxima Nova Light", Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      outline: none;
+
+      &:focus,
+      &:hover {
+         box-shadow: 0 0 0 5px white;
+      }
+
+      &_tail {
+         font-family: "Proxima Nova Regular", Arial, Helvetica, sans-serif;
+      }
+
+      &_text {
+         display: inline-flex;
+         vertical-align: top;
+         flex-direction: column;
+         justify-content: center;
+         align-items: flex-start;
+         width: 100%;
+      }
+
+      &::before {
+         content: '';
+         display: inline-flex;
+         vertical-align: top;
+         background-repeat: no-repeat;
+         background-size: contain;
+      }
+   }
+
+   &_apple {
+
+      .link {
+
+         &::before {
+            margin-right: 29px;
+            flex: 0 0 76px;
+            height: 37px;
+            background-image: url(../images/Icon_Apple.png);
+            background-position: 43px center;
+         }
+      }
+   }
+
+   &_google {
+      
+      .link {
+
+         &::before {
+            margin-right: 26px;
+            flex: 0 0 100px;
+            height: 39px;
+            background-image: url(../images/Icon_Google_Play.png);
+            background-position: 64px center;
+         }
+      }
+   }
+
+   &_logo {
+      align-self: center;
+      display: inline-flex;
+      vertical-align: top;
+      height: fit-content;
+      border-radius: 30px;
+      outline: none;
+   }
+}
+
+/* 768 */
+@media (max-width: $pad_width) {
+   .button {
+      margin-right: 30px;
+
+      &:last-of-type {
+         margin-right: 0;
+      }
+   }
+}
+
+/* 320 */
+@media (max-width: $phone_width) {
+   .button {
+      margin-right: 8px;
+      min-width: 142px;
+      min-height: 39px;
+
+      &_link {
+         font-size: 8px;
+         letter-spacing: 0.4px;
+      }
+
+      &:last-of-type {
+         margin-right: 0;
+      }
+   
+      &_apple {
+
+         .link {
+
+            &::before {
+               margin-right: 10px;
+               flex: 0 0 35px;
+               height: 17px;
+               background-position: 20px center;
+            }
+         }
+      }
+
+      &_google {
+         
+         .link {
+
+            &::before {
+               margin-right: 8px;
+               flex: 0 0 46px;
+               height: 18px;
+               background-position: 30px center;
+            }
+         }
+      }
+   }
+   
+   .logo {
+      width: 73px;
+      height: 78px;
+   }
+}
+
+@import '../scss/header.scss';
+@import '../scss/members.scss';
+@import '../scss/possibilities.scss';
+@import '../scss/download.scss';
+@import '../scss/footer.scss';

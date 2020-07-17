@@ -1,0 +1,188 @@
+// $header_container_width: 1532px;
+
+.header {
+   // width: 1920px;
+   // height: 960px;
+   position: relative;
+   color: white;
+   background-image: url(../images/football.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+
+   > .container {
+      padding-top: 54px;
+      padding-bottom: 110px;
+   }
+
+   &_line {
+      display: flex;
+      justify-content: space-between;
+      font-family: "Proxima Nova Light", Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 33px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+
+      &:before {
+         content: url(../images/surface1.svg);
+      }
+   }
+
+   &_title {
+      margin-top: 190px;
+      padding: 68px 0;
+      background-image: url(../images/Rectangle_1.svg);
+      background-position: 30% top;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: flex;
+      flex-direction: column;
+      font-family: "Proxima Nova Bold", Arial, Helvetica, sans-serif;
+      font-size: 90px;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+
+      &_last {
+         align-self: flex-end;
+      }
+   }
+
+   &_nav {
+      margin-bottom: 168px;
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+   }
+
+   &_menu {
+      display: inline-flex;
+      vertical-align: top;
+      position: absolute;
+      top: -33px;
+
+      .item {
+         margin-right: 40px;
+
+         &:last-child {
+            margin-right: 0;
+         }
+      }
+
+      .link {
+         color: #9071ea;
+         font-family: "Proxima Nova Light", Arial, Helvetica, sans-serif;
+         font-size: 14px;
+         line-height: 34px;
+         text-transform: uppercase;
+         letter-spacing: 0.7px;
+         
+         &:hover,
+         &:focus {
+            color: white;
+         }
+      }
+   }
+
+   &_buttons {
+      display: flex;
+      justify-content: center;
+   }
+}
+
+/* 768 */
+@media (max-width: $pad_width) {
+   .header {
+      
+      > .container {
+         padding: 54px 20px 90px;
+      }
+
+      &_title {
+         margin-top: 128px;
+         padding: 62px 0;
+         background-position: 50% top;
+         font-size: 64px;
+         letter-spacing: 3px;
+
+         &_last {
+            padding-left: 197px;
+         }
+      }
+
+      &_nav {
+         margin-bottom: 249px;
+         justify-content: center;
+      }
+
+      &_menu {
+         top: auto;
+         bottom: -140px;
+      }
+   }
+}
+
+/* 320px */
+@media (max-width: $phone_width) {
+   .header {
+      
+      > .container {
+         padding: 39px 10px 19px;
+         display: flex; 
+         flex-direction: column;
+
+         &::before {
+            display: flex;
+            justify-content: center;
+            content: url(../images/surface1.svg);
+            text-align: center;
+         }
+      }
+
+      &_line {
+         display: none;
+      }
+
+      &_title {
+         margin-top: 97px;
+         padding: 27px 0;
+         background-position: 85px top;
+         font-size: 32px;
+         line-height: 1.25;
+         letter-spacing: 1.5px;
+
+         &_last {
+            padding-left: 55px;
+            align-self: flex-start;
+         }
+      }
+
+      &_buttons {
+         margin: 88px 0 40px 0;
+         order: 3;
+      }
+
+      &_nav {
+         margin: 0;
+         padding: 0;
+         order: 4;
+         position: static;
+      }
+
+      &_menu {
+         position: static;
+         flex-wrap: wrap;
+         justify-content: space-evenly;
+
+         .item {
+            margin: 0 15px;
+         }
+
+         .link {
+            font-size: 12px;
+            line-height: 18px;
+         }
+      }
+   }
+}

@@ -1,0 +1,531 @@
+.members {
+   overflow: hidden;
+}
+
+.member {
+   font-family: "Proxima Nova Bold", Arial, Helvetica, sans-serif;
+   line-height: 1;
+   text-transform: uppercase;
+
+   .container {
+      display: flex;
+      padding-right: ($container_padding + 26px);
+      padding-left: ($container_padding + 131px);
+
+      &:before {
+         content: '';
+         flex: 0 0 53%;
+      }
+   }
+
+   &_title {
+      padding-top: 97px;
+      color: #e7e7e7;
+      font-size: 90px;
+   }
+
+   &_offers {
+
+      &_item {
+         background-color: #f5f4fa;
+         min-height: 256px;
+
+         &:first-child {
+            background-color: white;
+            min-height: 220px;
+         }
+
+         &:last-child {
+            background-color: #5e42b0;
+            min-height: 297px;
+
+            .member_offers {
+               
+               &_number {
+                  color: #0a0e34;
+
+                  &::after {
+                     background-color: #efefef;
+                  }
+               }
+
+               &_term {
+                  padding-top: 86px;
+               }
+
+               &_descript {
+                  padding-top: 25px;
+                  color: #ffffff;
+               }
+            }
+         }
+      }
+
+      &_figure{
+         position: relative;
+
+         &::before {
+            content: '';
+            position: absolute;
+            top: -175px;
+            left: -760px;
+            display: block;
+            width: 725px;
+            height: 1000px;
+            background: url(../images/athlets.png) no-repeat center;
+            background-size: contain;
+         }
+      }
+
+      &_number {
+         display: inline-flex;
+         vertical-align: top;
+         padding-top: 2px;
+         flex-direction: column;
+         color: #000000;
+         font-size: 18px;
+         letter-spacing: 0.9px;
+
+         &::after {
+            content: '';
+            margin-top: 5px;
+            display: block;
+            height: 5px;
+            border-radius: 2px;
+            background-color: #5e42b0;
+         }
+      }
+
+      &_term {
+         padding-top: 59px;
+         color: #c1c1c1;
+         font-size: 36px;
+         letter-spacing: 1.8px;
+      }
+
+      &_descript {
+         padding-top: 25px;
+         padding-bottom: 15px;
+         color: #000000;
+         font-family: "Proxima Nova Regular", Arial, Helvetica, sans-serif;
+         font-size: 20px;
+         line-height: 28px;
+         text-transform: none;
+      }
+   }
+
+   &:nth-child(2n) {
+
+      .container {
+
+         &:before {
+            content: none;
+         }
+
+         &::after {
+            content: '';
+            flex: 0 0 60%;
+         }
+      }
+      
+      .member {
+      
+         &_title {
+            padding-top: 107px;
+         }
+
+         &_offers {
+
+            &_item {
+               min-height: 244px;
+
+               &:first-child {
+                  min-height: 251px;
+               }
+
+               &:last-child {
+                  background-color: #0a0e34;
+                  min-height: 268px;
+
+                  .member_offers_number {
+                     color: #9173e6;
+
+                     &::after {
+                        background-color: #ffffff;
+                     }
+                  }
+               }
+            }
+      
+            &_figure{
+               position: relative;
+
+               &::before {
+                  top: -222px;
+                  left: 415px;
+                  width: 990px;
+                  height: 815px;
+                  background: url(../images/players.png) no-repeat center;
+                  background-size: contain;
+               }
+            }
+            
+            &_descript {
+               padding-top: 25px;
+               padding-bottom: 15px;
+            }
+         }
+      }
+   }
+}
+
+/* 768 */
+@media (max-width: $pad_width) {
+   .member {
+
+      .container {
+         padding-left: ($container_padding + 19px);
+
+         &::before {
+            flex: 0 0 40%;
+         }
+      }
+
+      &_title {
+         padding-top: 77px;
+      }
+
+      &_offers {
+         
+         &_term {
+            padding-top: 35px;
+         }
+
+         &_descript {
+            font-size: 18px;
+         }
+
+         &_item {
+            min-height: 235px;
+
+            &:first-child {
+               min-height: 183px;
+
+               .member {
+
+                  &_offers {
+
+                     &_term {
+                        padding-top: 54px;
+                     }
+                  }
+               }
+            }
+
+            &:last-child {
+               min-height: 205px;
+
+               .member {
+
+                  &_offers {
+
+                     &_term {
+                        padding-top: 35px;
+                     }
+                  }
+               }
+            }
+         }
+
+         &_figure{
+
+            &::before {
+               width: 500px;
+               height: 700px;
+               top: -55px;
+               left: -455px;
+            }
+         }
+      }
+
+      &:nth-child(2n) {
+
+         .container {
+
+            &::before {
+               content: none;
+            }
+
+            &::after {
+               flex: 0 0 45%;
+            }
+         }
+
+         .member {
+
+            &_title {
+               padding-top: 64px;
+            }
+
+            &_offers {
+
+               &_term {
+                  padding-top: 58px;
+               }
+
+               &_item {
+                  min-height: 235px;
+
+                  &:first-child {
+                     min-height: 200px;
+
+                     .member {
+                     
+                        &_offers {
+
+                           &_term {
+                              padding-top: 44px;
+                           }
+                        }
+                     }
+
+                     .container {
+
+                        &::after {
+                           flex: 0 0 50%;
+                        }
+                     }
+                  }
+
+                  &:last-child {               
+                     min-height: 205px;
+
+                     .member {
+                     
+                        &_offers {
+
+                           &_term {
+                              padding-top: 47px;
+                           }
+                        }
+                     }
+                  }
+               }
+
+               &_figure {
+
+                  &::before {
+                     width: 690px;
+                     height: 565px;
+                     top: -113px;
+                     left: 272px;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+/* 320 */
+@media (max-width: $phone_width) {
+   .member {
+      position: relative;
+
+      &::before {
+         content: '';
+         display: block;
+         width: 250px;
+         height: 280px;
+         position: absolute;
+         z-index: 999;
+         top: 80px;
+         left: 60px;
+         background: url(../images/athlets.png) no-repeat left top;
+         background-size: contain;
+      }
+
+      &_title {
+         font-size: 50px;
+         line-height: 60px;
+
+         &.container {
+            padding: 13px 19px 233px;
+
+            &::before {
+               content: none;
+            }
+         }
+      }
+
+      &_offers {
+         display: none;
+      }
+
+      &:nth-child(2n) {
+
+         .container {
+
+            &::after {
+               content: none;
+            }
+         }
+
+         &::before {
+            width: 302px;
+            height: 248px;
+            background: url(../images/players.png) no-repeat left top;
+            background-size: contain;
+            top: 102px;
+            left: 4px;
+         }
+
+         .member {
+
+            &_title {
+
+               &.container {
+                  padding: 23px 23px 233px;
+
+                  &::after {
+                     content: none;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .member_offers.fotorama {
+     display: block;
+   }
+
+   .fotorama {
+
+      &__wrap {
+         width: 100% !important;
+      }
+
+      &__nav--dots {
+         .fotorama__nav__frame {
+            padding: 17px 0;
+         }
+      }
+
+      &__stage {
+         max-height: 219px;
+         height: 219px !important;
+      }
+
+      &__nav {
+         background-color: #f5f4f9;
+         
+         &__frame--dot.fotorama__active {
+
+            .fotorama__dot {
+               width: 10px;
+               height: 10px;
+               background-color: #5c3caf;
+               border-radius: 50%;
+               border: 0px solid transparent;
+            }
+         }
+      }
+
+      &__dot {
+         width: 10px;
+         height: 10px;
+         background-color: #d8d8d8;
+         border-radius: 50%;
+         border: 0px solid transparent;
+      }
+
+      .member {
+
+         &_offers {
+
+            &_figure {
+
+               &::before {
+                  content: none;
+               }
+            }
+
+            &_item {
+               min-height: 219px;
+
+               .container {
+                  padding: 0 12px 0 18px;
+
+                  &::before {
+                     content: none;
+                  }
+               }
+
+               &:last-child {
+                  background-color: #f5f4f9;
+                  
+                  .member {
+
+                     &_offers {
+
+                        &_number {
+                           color: #000000;
+                           font-size: 14px;
+                           line-height: 1;
+                           letter-spacing: 0.7px;
+
+                           &::after {
+                              margin-top: 3px;
+                              background-color: #5e42b0;
+                              height: 4px;
+                           }
+                        }
+
+                        &_term {
+                           padding-top: 77px;
+                           font-size: 28px;
+                           line-height: 1;
+                           letter-spacing: 1.4px;
+                        }
+
+                        &_descript {
+                           padding-top: 21px;
+                           padding-bottom: 0px;
+                           color: #000000;
+                           font-size: 15px;
+                           line-height: 18px;
+                           letter-spacing: 0.75px;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .member:nth-child(2n) {
+
+      .fotorama {
+
+         &__stage {
+            max-height: 174px;
+            height: 174px !important;
+         }
+
+         .member_offers_item:last-child {
+            background-color: #f5f4f9;
+            min-height: 174px;
+
+            .member_offers_number {
+               color: #000000;
+            }
+
+            .member_offers_number::after {
+               background-color: #5e42b0;
+            }
+         }       
+      }
+   }
+}
